@@ -1,0 +1,13 @@
+.aboutus {
+
+   border: 2px #777 solid;
+   margin: 3 px;
+   padding: 45px;
+} 
+.head{
+    display: flex;
+    color:black;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+}
