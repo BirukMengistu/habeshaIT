@@ -20,9 +20,9 @@ class  App extends React.Component {
   
 
   
-  async componentDidMount(){
+  componentDidMount(){
     const url ="http://newsapi.org/v2/everything?q=bitcoin&from=2020-05-18&sortBy=publishedAt&apiKey=852f9be59f0b4c9cb87dad906ed35b47";
-    await fetch(url)
+    fetch(url)
     .then(response => response.json())
     .then(d => { this.setState({ blogApi: d});
       console.log("HERE", this.state.blogApi);
@@ -34,9 +34,7 @@ class  App extends React.Component {
     return (
       <div className="App">
       <Header/> 
-      <CarouselHome/>
-      
-        
+        <CarouselHome/>
     
         <Switch>
           <Route path='/about' component={About} />
@@ -51,5 +49,14 @@ class  App extends React.Component {
 
 export default App;
 
+
+ /* .then(response => response.json()) //convert to json
+        //.then(users =>this.setState({ news: users}));
+        .then(res => {
+            const articles = res.articles;
+            // Set state with result
+            console.log(articles);
+            this.setState({ articles: articles });
+          }) */
 /* { blogApi.map( (blognews) => <div>{blognews.articles}</div>)};
 <About blog ={blogColl.articles} key={$(index)} /> */
