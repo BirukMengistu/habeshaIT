@@ -9,33 +9,12 @@ import CarouselHome from './component/carousel/Carousel.comp'
 import {Switch  , Route} from 'react-router-dom'
 class  App extends React.Component {
 
-
-  constructor(props)
-  {
-      super(props)
-      this.state = {
-          blogApi:[]
-                  }
-  }
-  
-
-  
-  componentDidMount(){
-    const url ="http://newsapi.org/v2/everything?q=bitcoin&from=2020-05-18&sortBy=publishedAt&apiKey=852f9be59f0b4c9cb87dad906ed35b47";
-    fetch(url)
-    .then(response => response.json())
-    .then(d => { this.setState({ blogApi: d});
-      console.log("HERE", this.state.blogApi);
-    })
-    .catch(error => console.log(error))
-    }
   render(){
-    const { blogApi } = this.state;
+         
     return (
       <div className="App">
       <Header/> 
-        <CarouselHome/>
-    
+        <ServiceList/>
         <Switch>
           <Route path='/about' component={About} />
         </Switch>
@@ -48,14 +27,13 @@ class  App extends React.Component {
 }
 
 export default App;
-
+/*  */
 
  /* .then(response => response.json()) //convert to json
         //.then(users =>this.setState({ news: users}));
         .then(res => {
             const articles = res.articles;
-            // Set state with result
-            console.log(articles);
+           
             this.setState({ articles: articles });
           }) */
 /* { blogApi.map( (blognews) => <div>{blognews.articles}</div>)};

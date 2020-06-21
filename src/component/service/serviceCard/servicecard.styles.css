@@ -1,3 +1,67 @@
-servicecard {
 
+.feature {
+    display: flex;
+    justify-content:space-between;
+    height: 570px;
+    background-color: #f5f5f5;
+    font-family: 'Baloo Paaji 2', cursive;
+    padding: 10px;
+  }
+  
+
+  .card {
+    flex-direction: column;
+    background-color: #222831;
+    height: 37rem;
+    border-radius: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .card__name {
+    margin-top: 15px;
+    font-size: 1.5em;
+
+  }
+  
+
+
+img {
+    height: 400px;
+    width: 270px;
+    border-radius: 4px;
+    border: none solid #272133;
+    margin-top: 20px;
+    margin-top: 2;
 }
+  
+  h6 {
+    margin: 0 0 5px;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.35;
+    text-shadow: 1px 1px rgba(black,0.7);  
+    }
+  
+  
+  
+  
+  .social-icons a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    color: #ff003c;
+    background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    font-size: 1.2em;
+  }
+  
